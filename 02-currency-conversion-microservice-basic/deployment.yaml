@@ -43,11 +43,12 @@ metadata:
   name: currency-conversion
   namespace: default
 spec:
+  clusterIP: None
   ports:
-  - port: 8100 #CHANGE
+  - port: 8100 #CHANGE this will be the service port
     protocol: TCP
-    targetPort: 8100 #CHANGE
+    targetPort: 8100 #CHANGE # this target pod is mappd to the container pod
   selector:
     app: currency-conversion
   sessionAffinity: None #CHANGE
-  type: NodePort
+  type: ClusterIP

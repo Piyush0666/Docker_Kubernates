@@ -14,7 +14,7 @@ spec:
           service:
            name: currency-exchange
            port:
-              number: 8000     
+              number: 8000  # so this will maped to the targetPod defined in currency-exchange
       - path:  /currency-conversion/
         pathType: Prefix
         backend:
