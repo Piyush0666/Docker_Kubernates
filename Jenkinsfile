@@ -26,4 +26,15 @@ pipeline{
             }
         }
     }
+    post{
+        always{
+            echo 'THIS IS ALWAYS POST'
+        }
+        success{
+           echo 'THIS IS SUCCESS POST WHEN BUILD GET SUCCUSSFULL EXECUTED'
+        }
+        failure{
+            echo 'THIS WILL EXECUTE WHEN BUILD IS NOT RUNNING PROPERLY'
+        }
+    }
 }
